@@ -38,3 +38,26 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+
+button:hover {
+  background-color: #1565c0;
+}
+
+#taskList {
+  margin-top: 20px;
+  list-style: none;
+  padding: 0;
+}
+
+#taskList li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.done {
+  text-decoration: line-through;
+  color: gray;
+}
