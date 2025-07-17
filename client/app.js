@@ -10,7 +10,16 @@ function addTask() {
     li.classList.toggle('done');
     saveTasks();
   });
+
   document.getElementById('taskList').appendChild(li);
   taskInput.value = '';
   saveTasks();
+  const deleteBtn = document.createElement('button');
+deleteBtn.textContent = '🗑';
+deleteBtn.onclick = () => {
+  li.remove();
+  saveTasks();
+};
+li.appendChild(deleteBtn);
+
 }
