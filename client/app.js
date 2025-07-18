@@ -21,5 +21,14 @@ deleteBtn.onclick = () => {
   saveTasks();
 };
 li.appendChild(deleteBtn);
-
 }
+function saveTasks() {
+  const tasks = [];
+  document.querySelectorAll('#taskList li').forEach(li => {
+    const text = li.childNodes[0].textContent;
+    const done = li.classList.contains('done');
+    tasks.push({ text, done });
+  });
+  localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
